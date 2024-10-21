@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bartlomiej Wilman</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<script>
+    function downloadProject() {
+        // Zmienna z URL do pliku ZIP
+        const url = 'https://github.com/BartekWilman/Spis-ksi-ek';
+        // Tworzenie elementu <a> i symulowanie kliknięcia
+        const link = document.createElement('a');
+        link.href = url;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+    function downloadProject2() {
+        // Zmienna z URL do pliku ZIP
+        const url = 'https://github.com/BartekWilman/Lewy-sklep-NATO';
+        // Tworzenie elementu <a> i symulowanie kliknięcia
+        const link = document.createElement('a');
+        link.href = url;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+    function downloadProject3() {
+        // Zmienna z URL do pliku ZIP
+        const url = 'https://github.com/BartekWilman/Liczbowy-Bokser';
+        // Tworzenie elementu <a> i symulowanie kliknięcia
+        const link = document.createElement('a');
+        link.href = url;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+</script>
+<body>
+    <header>
+        <div class="welcome">
+            <p>Witaj</p>
+            <h1>Jestem Bartłomiej Wilman</h1>
+            <h2>Były żołnierz, student informatyki</h2>
+            <button>Zobacz moje portfolio</button>
+            <!-- skrypt skrolującyw dół po kliknięciu w przycisk -->
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    // Znajdź przycisk w sekcji welcome
+                    const button = document.querySelector('.welcome button');
+                    
+                    // Dodaj nasłuchiwanie na kliknięcie przycisku
+                    button.addEventListener('click', function() {
+                        // Znajdź element docelowy (h1 w sekcji portfolio)
+                        const targetElement = document.getElementById('projects-heading');
+                        
+                        // Przewiń do elementu docelowego
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    });
+                });
+            </script>
+        </div>
+        <img src="images/soldier.png" alt="Poprzednia praca">
+    </header>
+    <!-- pierwsza strona -->
+    <section class="features clearfix">
+        <h1>O mnie kiedyś / teraz / co potem</h1>
+        <div class="feature">
+            <img src="images/clogo.png" alt="logo C#">
+            <h2>O moich przypadkowych zainteresowaniach jakim jest zabawa z C# i z bazami danych</h2>
+            <p class="description">Zainteresowanie programowaniem odkryłem przypadkiem szukając jakiegoś rozwijającego zajęcia będącego jednocześnie odskocznią od monotonnej pracy na magazynie.
+            </p>
+        </div>
+        <div class="feature">
+            <img src="images/database.png" alt="logo baz danych">
+            <h2>Jak zdobywam wiedzę</h2>
+            <p class="description">Oprócz zajęć na uczelni, w wolnych chwilach staram się rozwijać korzystając z kursów na udemy, tutorialach na YT oraz czytając książki o wybranym zagadnieniu</p>
+        </div>
+        <div class="feature">
+        <img src="images/PowerBI-logo-new-1.png" alt="">
+        <h2>Co planuję</h2>
+        <p class="description">Bez presji stopniowo poszerzać portfolio bawiąc się programowaniem. Głównym celem jest sam rozwój.</p>
+        </div>
+    </section>
+    <!-- projekty -->
+    <section class="portfolio">
+        <h1 id="projects-heading">Moje ostatnie projekty</h1>
+        <div class="project clearfix">
+            <div class="web">
+                <img src="images/proj1.png" alt="portfolio">
+            </div>
+            <div class="about">
+                <h2>Zestawienie przeczytanych książek</h2>
+                <p>Jest to projekt będący rozgrzewką przed rozpoczęciem pracy nad zadaniem zaliczeniowym w powerBi. Korzystając ze spisów przeczytanych książek przeze mnie na przestrzeni lat
+                    zamieściłem informacje te w pliku w excelu i zobrazowałem je w raporcie.
+                </p>
+                <button class="download" onclick="downloadProject()">Zobacz projekt</button>
+            </div>
+        </div>
+            <div class="project clearfix">
+                <div class="web">
+                    <img src="images/proj2.png" alt="przykład">
+                </div>
+                <div class="about">
+                    <h2>Czaronrynkowy sklep z bronią</h2>
+                    <p>Właściwy projektem oddanym do oceny w trakcie studiów. Fikcyjne zestawienie sprzedaży w sklepie bronią. Praca miała na celu wykorzystanie większej ilości narzędzi
+                        oferowanych przez powerBi, między innymi jak przekształcanie danych, czy tworzenie relacji między arkuszami.
+                    </p>
+                    <button class="download" onclick="downloadProject2()">Zobacz projekt</button>
+                </div>
+            </div>
+            <div class="project clearfix">
+                <div class="web">
+                    <img src="images/proj3.png" alt="przykład">
+                </div>
+                <div class="about">
+                    <h2>Liczbowy symulator walki bokserskiej</h2>
+                    <p>Konsolowy program mający na celu symulowanie walki bokserskiej za pomocą liczb. Użytkownik nie widzi większości statystyk, a cała magia dzieje się backendzie</p>
+                    <button class="download" onclick="downloadProject3()">Zobacz projekt</button>
+                </div>
+            </div>
+            <div class="project clearfix">
+                <div class="web">
+                    <img src="images/proj4.png" alt="przykład">
+                </div>
+                <div class="about">
+                    <h2>W.I.P.</h2>
+                    <p>Jedyny projekt bez możliwości pobrania go. Jest to projekt z udemy, którego tworząc uczę się jednocześnie unity. Nie jest gotowy.</p>
+                </div>
+            </div>   
+    </section>
+    <!-- motto -->
+    <section class="slogan">
+        <div class="bg">
+            <h1>Moje życiowe motto</h1>
+            <p class="text">Życie ponad śmiercią. Siła ponad słabością. Podróż ponad celem.</p>
+            <p class="author">Brandon Sanderson „Droga królów”</p>
+        </div>
+    </section>
+    <!-- hobby -->
+    <section class="hobby clearfix">
+        <h1>W wolnym czasię lubię:</h1>
+        <div class="item">
+            <p>Uprawiać sport</p>
+        </div>
+        <div class="item">
+            <p>Czytać fantastykę</p>
+        </div>
+        <div class="item">
+            <p>(Próbować) Gotować</p>
+        </div>
+        <div class="item">
+            <p>Grać w gry</p>
+        </div>
+    </section>
+    <!-- kontakt -->
+    <section class="contact">
+        <h1>Skontaktuj się ze mną</h1>
+        <div class="wrap clearfix">
+            <form action="send_email.php" method="POST">
+                <input type="text" name="name" placeholder="Twoje imię" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Twoja wiadomość" required></textarea>
+                <button type="submit">Wyślij wiadomość</button>
+            </form>
+        
+        <div class="socials">
+            <div class="social clearfix"><img src="images/contact1.png" alt="mail">
+                <span>bartekwilman@op.pl</span>
+            </div>
+            <div class="social clearfix">
+                <img src="images/contact2.png" alt="telefon">
+                <span>333666999</span>
+            </div>
+            <div class="social clearfix">
+                <img src="images/contact3.png" alt="facebook">
+                <span><a href="https://www.facebook.com/bartek.wilman">Bartek Wilman</a></span>
+            </div>
+        </div>
+        </div>
+    </section>
+    <footer>&copy; 2024 B.Wilman</footer>
+</body>
+</html>
